@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import Form from './components/Form'
+import ReviewList from './components/ReviewList'
+import { v4 as uuidv4 } from 'uuid'
 
-function App() {
+const App = () => {
+  const [ form, setForm ] = useState({ pizzaplace: '', review: '', rating: '', id: uuidv4() })
+  const [ reviews, setReviews ] = useState([])
+  const [ editing, setEditing ] = useState(false)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Pizza Place Reviews</h1>
+      <Form 
+        form={form} 
+        setForm={setForm} 
+        reviews={reviews} 
+        setReviews={setReviews} 
+        editing={editing}
+        setEditing={setEditing}
+      />
+      <ReviewList 
+        reviews={reviews}
+        setReviews={setReviews}
+        setForm={setForm}  
+        setEditing={setEditing}
+      />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
