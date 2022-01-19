@@ -16,6 +16,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
         form.rating = rating
         setReviews([ ...reviews, form ])
         setForm({ pizzaplace: '', review: '', rating: '', id: uuidv4() })
+        setRating(0)
     }
 
     const handleUpdate = e => {
@@ -25,6 +26,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
         const updatedReviews = reviews.map(review => review.id === form.id ? form : review)
         setReviews(updatedReviews)
         setForm({ pizzaplace: '', review: '', rating: '', id: uuidv4() })
+        setRating(0)
     }
 
     const handleRating = e => {
@@ -54,11 +56,8 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
             />
             <label htmlFor='rating'>Rating</label>
             <Rating 
-                type='number'
-                name='rating'
-                id='rating'
-                value={rating}
-                onChange={handleChange}
+                ratingValue={rating}
+                initialValue={0}
                 onClick={handleRating}
             />
             <button 
