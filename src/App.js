@@ -8,6 +8,7 @@ const App = () => {
   const [ form, setForm ] = useState({ pizzaplace: '', review: '', rating: '', id: uuidv4() })
   const [ reviews, setReviews ] = useState([])
   const [ editing, setEditing ] = useState(false)
+  const [ rating, setRating ] = useState(0)
   
   return (
     <div className="app">
@@ -19,12 +20,15 @@ const App = () => {
         setReviews={setReviews} 
         editing={editing}
         setEditing={setEditing}
+        rating={rating}
+        setRating={setRating}
       />
       <ReviewList 
         reviews={reviews}
         setReviews={setReviews}
         setForm={setForm}  
         setEditing={setEditing}
+        setRating={setRating}
       />
     </div>
   )

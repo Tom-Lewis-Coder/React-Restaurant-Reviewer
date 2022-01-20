@@ -1,7 +1,7 @@
 import React from 'react'
 import ReviewItem from './ReviewItem'
 
-const ReviewList = ({ reviews, setReviews, setForm, setEditing }) => {
+const ReviewList = ({ reviews, setReviews, setForm, setEditing, setRating }) => {
 
     const handleDelete = id => {
         const updatedreviews = reviews.filter(review => review.id !== id)
@@ -11,6 +11,7 @@ const ReviewList = ({ reviews, setReviews, setForm, setEditing }) => {
     const handleEdit = id => {
         const editedReview = reviews.filter(review => review.id === id)
         setForm(editedReview[0])
+        setRating(editedReview[0].rating)
         setEditing(true)
     }
 
