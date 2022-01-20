@@ -34,7 +34,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
     }
 
     return(
-        <form className='form' onSubmit={editing ? handleUpdate : handleSubmit}>
+        <form className='form' onSubmit={ editing ? handleUpdate : handleSubmit }>
             <h2>Leave a Review</h2>
             <label htmlFor='pizzaplace'>Pizza Place</label>
             <input 
@@ -59,8 +59,8 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
                 ratingValue={rating}
                 onClick={handleRating}
             />
-            <button 
-                type='submit'>{editing ? 'Update' : 'Submit'}
+            <button type='submit'>
+                { editing ? 'Update' : 'Submit' }
             </button>
         </form>
     )
