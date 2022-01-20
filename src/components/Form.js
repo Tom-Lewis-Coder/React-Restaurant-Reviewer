@@ -57,7 +57,6 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
             <label htmlFor='rating'>Rating</label>
             <Rating 
                 ratingValue={rating}
-                initialValue={0}
                 onClick={handleRating}
             />
             <button 

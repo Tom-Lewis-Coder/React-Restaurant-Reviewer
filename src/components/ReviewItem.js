@@ -3,7 +3,6 @@ import { FaTrash, FaEdit, FaStar  } from 'react-icons/fa'
 import { v4 as uuidv4 } from 'uuid'
 
 const ReviewItem = ({ review, handleDelete, handleEdit }) => {
-    console.log(review)
     return (
         <div className={(review.rating/20) <= 2 ? 'reviewItemBad' : (review.rating/20) === 3 ? 'reviewItemMedium' : 'reviewItemGood'}> 
             <h2>{review.pizzaplace}</h2>
