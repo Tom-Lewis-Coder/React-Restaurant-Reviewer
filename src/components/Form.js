@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { Rating } from 'react-simple-star-rating'
 
-export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing } ) => {
-
-    const [ rating, setRating ] = useState(0)
+export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing, rating, setRating } ) => {
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -24,7 +22,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
         setEditing(false)
         form.rating = rating
         const updatedReviews = reviews.map(review => review.id === form.id ? form : review)
-        setReviews(updatedReviews)
+        setReviews(updatedReviews) 
         setForm({ pizzaplace: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
     }
