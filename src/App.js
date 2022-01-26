@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import Header from './components/Header'
 import Form from './components/Form'
 import ReviewList from './components/ReviewList'
 import { v4 as uuidv4 } from 'uuid'
@@ -11,8 +12,10 @@ const App = () => {
   const [ rating, setRating ] = useState(0)
   
   return (
-    <div className="app">
-      <h1>Pizza Place Reviews</h1>
+    <div className='app'>
+      <Header 
+        Header={'Pizza Place Reviews'} 
+      />
       <Form 
         form={form} 
         setForm={setForm} 
