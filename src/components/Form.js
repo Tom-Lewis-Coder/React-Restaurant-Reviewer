@@ -54,6 +54,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
                 value={form.pizzaplace}
                 onChange={handleChange}
             />
+            <label htmlFor='date'>Date of visit</label>
              <DatePicker 
                 selected={date}
                 onSelect={handleDate}
