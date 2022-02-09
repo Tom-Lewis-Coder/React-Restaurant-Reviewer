@@ -62,3 +62,7 @@ h2, h3 {
 .star {
     color: rgb(252, 174, 29);
 }
+
+.date {
+    font-size: small;
+}

@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import { Rating } from 'react-simple-star-rating'
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 
-export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing, rating, setRating } ) => {
+export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing, rating, setRating, date, setDate } ) => {
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -12,23 +14,31 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
     const handleSubmit = e => {
         e.preventDefault()
         form.rating = rating
+        form.date = date
         setReviews([ ...reviews, form ])
-        setForm({ pizzaplace: '', review: '', rating: '', id: uuidv4() })
+        setForm({ pizzaplace: '', date: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
+        setDate(new Date())
     }
 
     const handleUpdate = e => {
         e.preventDefault()
         setEditing(false)
         form.rating = rating
+        form.date = date
         const updatedReviews = reviews.map(review => review.id === form.id ? form : review)
         setReviews(updatedReviews) 
-        setForm({ pizzaplace: '', review: '', rating: '', id: uuidv4() })
+        setForm({ pizzaplace: '', date: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
+        setDate(new Date())
     }
 
     const handleRating = e => {
         setRating(e)
+    }
+
+    const handleDate = e => {
+        setDate(e)
     }
 
     return(
@@ -43,6 +53,10 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
                 autoComplete='off'
                 value={form.pizzaplace}
                 onChange={handleChange}
+            />
+             <DatePicker 
+                selected={date}
+                onSelect={handleDate}
             />
             <label htmlFor='review'>Review</label>
             <textarea 
