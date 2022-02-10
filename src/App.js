@@ -6,7 +6,7 @@ import ReviewList from './components/ReviewList'
 import { v4 as uuidv4 } from 'uuid'
 
 const App = () => {
-  const [ form, setForm ] = useState({ pizzaplace: '', date: '', review: '', rating: '', id: uuidv4() })
+  const [ form, setForm ] = useState({ pizzaplace: '', date: '', custName: '', review: '', rating: '', id: uuidv4() })
   const [ reviews, setReviews ] = useState([])
   const [ editing, setEditing ] = useState(false)
   const [ rating, setRating ] = useState(0)
@@ -28,7 +28,6 @@ const App = () => {
         setRating={setRating}
         date={date}
         setDate={setDate}
-
       />
       <ReviewList 
         reviews={reviews}

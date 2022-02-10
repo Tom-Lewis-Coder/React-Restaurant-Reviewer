@@ -16,7 +16,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
         form.rating = rating
         form.date = date
         setReviews([ ...reviews, form ])
-        setForm({ pizzaplace: '', date: '', review: '', rating: '', id: uuidv4() })
+        setForm({ pizzaplace: '', date: '', custName: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
         setDate(new Date())
     }
@@ -28,7 +28,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
         form.date = date
         const updatedReviews = reviews.map(review => review.id === form.id ? form : review)
         setReviews(updatedReviews) 
-        setForm({ pizzaplace: '', date: '', review: '', rating: '', id: uuidv4() })
+        setForm({ pizzaplace: '', date: '', custName: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
         setDate(new Date())
     }
@@ -58,6 +58,16 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
              <DatePicker 
                 selected={date}
                 onSelect={handleDate}
+            />
+            <label htmlFor='custName'>Name</label>
+            <input 
+                type='text'
+                placeholder='Your Name...'
+                name='custName'
+                id='custName'
+                autoComplete='off'
+                value={form.custName}
+                onChange={handleChange}
             />
             <label htmlFor='review'>Review</label>
             <textarea 
