@@ -54,11 +54,18 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
                 value={form.pizzaplace}
                 onChange={handleChange}
             />
+            <label htmlFor='rating'>Rating</label>
+            <Rating 
+                id='rating'
+                ratingValue={rating}
+                onClick={handleRating}
+            /><br/>
             <label htmlFor='date'>Date of visit</label>
-             <DatePicker 
+            <DatePicker 
+                id='date'
                 selected={date}
                 onSelect={handleDate}
-            />
+            /><br/>
             <label htmlFor='custName'>Name</label>
             <input 
                 type='text'
@@ -77,12 +84,7 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
                 value={form.review}
                 onChange={handleChange}
             />
-            <label htmlFor='rating'>Rating</label>
-            <Rating 
-                ratingValue={rating}
-                onClick={handleRating}
-            />
-            <button type='submit'>
+            <button type='submit' id='submit'>
                 { editing ? 'Update' : 'Submit' }
             </button>
         </form>
