@@ -4,29 +4,53 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
+    background-color: red;
+    color: white;
+    height: 100%;
+    background: linear-gradient(180deg, red 80px, rgb(65, 64, 64) 0px);
 }
 
+/* form styling */
+
 .form {
-    border: 1px solid black;
+    border: 2px solid white;
     border-radius: 5px;
-    box-shadow: 1px 1px 2px 2px black;
+    box-shadow: 1px 1px 3px 3px black;
     padding: 1rem;
     width: 20rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-image:url('pizzaPic.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 input, textarea, button {
     display: block;
-    margin: 0.5rem auto 0.5rem auto;
+    margin: 0.66rem auto 0.66rem auto;
     padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
 }
 
 input, textarea {
-    width: calc(100% - 1rem);
+    min-width: calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
 }
 
-button {
+textarea {
+    min-height: 4rem;
+}
+
+#submit {
     border: 1px solid black;
     cursor: pointer;
+    margin-top: 1.2rem;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 5rem;
 }
 
 h1 {
@@ -37,32 +61,70 @@ h2, h3 {
     margin: 0 0 1rem 0;
 }
 
+/* review item styling */
+
 .reviewItemBad, .reviewItemMedium, .reviewItemGood {
     border-radius: 5px;
     padding: 1rem;
+    margin: 10px;
     width: 20rem;
     margin-top: 1rem;
+    background-color: rgb(27, 27, 27);
 }
 
 .reviewItemBad {
-    border: 1px solid red;
-    box-shadow: 1px 1px 2px 2px red;
+    border: 3px solid red;
 }
 
 .reviewItemMedium {
-    border: 1px solid orange;
-    box-shadow: 1px 1px 2px 2px orange;
+    border: 3px solid orange;
 }
 
 .reviewItemGood {
-    border: 1px solid green;
-    box-shadow: 1px 1px 2px 2px green;
+    border: 3px solid green;
 }
 
-.star {
+#pizzaPlaceItem, #custNameItem, #reviewItem {
+    margin: 0.5rem auto 0.5rem auto;
+    padding: 0.1rem 0.1rem;
+}
+
+#pizzaPlaceItem {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#starItem {
     color: rgb(252, 174, 29);
+    margin: 0.25rem auto 0.25rem auto;
+    padding: 0.1rem 0.1rem;
 }
 
-.date {
+#dateItem {
+    font-size: small;
+    margin: 0.25rem auto 0.25rem auto;
+    padding: 0.1rem 0.1rem;
+}
+
+#custNameItem {
     font-size: small;
 }
+
+.buttonItem {
+    display: block;
+    margin: auto;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+#buttonDelete {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#buttonEdit {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
