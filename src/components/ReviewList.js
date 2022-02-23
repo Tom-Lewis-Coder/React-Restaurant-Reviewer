@@ -1,11 +1,16 @@
 import React from 'react'
 import ReviewItem from './ReviewItem'
+import { v4 as uuidv4 } from 'uuid'
 
 const ReviewList = ({ reviews, setReviews, setForm, setEditing, setRating, setDate }) => {
 
     const handleDelete = id => {
         const updatedreviews = reviews.filter(review => review.id !== id)
         setReviews(updatedreviews)
+        setForm({ pizzaplace: '', date: '', custName: '', review: '', rating: '', id: uuidv4() })
+        setRating(0)
+        setDate(new Date())
+        setEditing(false)
     }
 
     const handleEdit = id => {
