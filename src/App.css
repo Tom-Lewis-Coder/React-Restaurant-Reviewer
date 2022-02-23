@@ -21,7 +21,7 @@
     font-size: 1rem;
     font-weight: bold;
     font-family: sans-serif;
-    background-image:url('20190215_193736.jpg');
+    background-image: url('PPB.jpg');
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -140,5 +140,3 @@ h2, h3 {
     border: 1px solid black;
     border-radius: 5px;
 }
-
-
