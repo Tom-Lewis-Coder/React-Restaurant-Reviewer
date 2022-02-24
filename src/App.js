@@ -10,7 +10,7 @@ const App = () => {
   const [ reviews, setReviews ] = useState([])
   const [ editing, setEditing ] = useState(false)
   const [ rating, setRating ] = useState(0)
-  const [ date, setDate] = useState(new Date())
+  const [ date, setDate ] = useState(new Date())
   
   return (
     <div className='app'>
