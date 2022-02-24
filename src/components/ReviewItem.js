@@ -7,7 +7,7 @@ const ReviewItem = ({ review, handleDelete, handleEdit }) => {
         <div className={(review.rating/20) <= 2 ? 'reviewItemBad' : (review.rating/20) === 3 ? 'reviewItemMedium' : 'reviewItemGood'}> 
             <div id='pizzaPlaceItem'>{review.pizzaplace}</div>
             <div id='starItem'>{[...Array(review.rating/20).keys()].map(el => el = <FaStar key={uuidv4()} />)}</div>
-            <div id='reviewItem'>{review.review}</div>
+            <div id='reviewItem'>{review.review}</div><br/>
             <div id='custNameItem'>{review.custName}</div>
             <div id='dateItem'>{review.date.toDateString()}</div>
             <div className='buttonItem'>
