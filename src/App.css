@@ -7,19 +7,19 @@
     font-family: sans-serif;
     color: white;
     height: 100%;
-    background: linear-gradient(180deg, rgb(224, 2, 2) 80px, rgb(26, 25, 25) 0px);
+    background: linear-gradient(180deg, rgb(224, 2, 2) 6rem, rgb(26, 25, 25) 0px);
     background-repeat: no-repeat;
     background-size: auto;
-    border: 2px solid black;
-    padding: 0 0 85px 0;
+    border: 0.16rem solid black;
+    padding: 0 0 5rem 0;
 }
 
 /* form styling */
 
 .form {
-    border: 2px solid white;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px 3px black;
+    border: 0.15rem solid white;
+    border-radius: 0.4rem;
+    box-shadow: 0.07rem 0.07rem 0.2rem 0.2rem black;
     padding: 1rem;
     width: 20rem;
     font-size: 1rem;
@@ -51,19 +51,19 @@ textarea {
 #submit {
     cursor: pointer;
     margin-top: 1.2rem;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     height: 1.75rem;
     width: 5rem;
     background-color: white;
     color: black;
     font-weight: bold;
-    box-shadow: 0 3px 6px;
+    box-shadow: 0 0.3rem 0.5rem;
 }
 
 #submit:hover {
     background-color: lightgray;
     color: black;
-    box-shadow: 0 1px 4px;
+    box-shadow: 0 0.01rem 0.3rem;
 }
 
 h1 {
@@ -84,24 +84,25 @@ h2, h3 {
 .reviewItemBad, .reviewItemMedium, .reviewItemGood {
     color: black;
     border: 2px solid white;
-    border-radius: 5px;
+    border-radius: 0.8rem;
     padding: 1rem;
-    margin: 10px;
+    margin: 0.8rem;
     width: 20rem;
     margin-top: 1rem;
     background-color: lightgray;
+    font-size: 0.9rem;
 }
 
 .reviewItemBad {
-    box-shadow: -10px -10px 50px 5px inset red;
+    box-shadow: -0.8rem -0.8rem 8rem 0.4rem inset red;
 }
 
 .reviewItemMedium {
-    box-shadow: -10px -10px 50px 5px inset orange;
+    box-shadow: -0.8rem -0.8rem 8rem 0.4rem inset orange;
 }
 
 .reviewItemGood {
-    box-shadow: -10px -10px 50px 5px inset green;
+    box-shadow: -0.8rem -0.8rem 8rem 0.4rem inset green;
 }
 
 #pizzaPlaceItem, #custNameItem, #reviewItem {
@@ -118,6 +119,7 @@ h2, h3 {
     color: rgb(252, 174, 29);
     margin: 0.25rem auto 0.25rem auto;
     padding: 0.1rem 0.1rem;
+    font-size: 1.45rem;
 }
 
 #dateItem {
@@ -141,15 +143,15 @@ h2, h3 {
 
 #buttonDelete, #buttonEdit {
     padding: 0.4rem 0.75rem 0.4rem 0.75rem;
-    border-radius: 10px;
+    border-radius: 0.8rem;
     background-color: white;
     color: black;
     font-weight: bold;
-    box-shadow: 0 1px 3px;
+    box-shadow: 0 0.01rem 0.3rem;
 }
 
 #buttonDelete:hover, #buttonEdit:hover {
     background-color: lightgray;
     color: black;
-    box-shadow: 0 1px 3px;
+    box-shadow: 0 0.005rem 0.15rem;
 }
