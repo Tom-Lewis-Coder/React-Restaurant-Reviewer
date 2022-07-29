@@ -1,32 +1,33 @@
+
 .app {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
     color: white;
-    height: 100%;
+    /* height: 100%; */
     background: linear-gradient(180deg, rgb(224, 2, 2) 6rem, rgb(26, 25, 25) 0px);
     background-repeat: no-repeat;
     background-size: auto;
-    border: 0.16rem solid black;
-    padding: 0 0 5rem 0;
+    /* border: 0.16rem solid black; */
+    padding: 0 0 10rem 0;
 }
 
 /* form styling */
 
 .form {
     border: 0.15rem solid white;
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
     box-shadow: 0.07rem 0.07rem 0.2rem 0.2rem black;
     padding: 1rem;
     width: 20rem;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: bold;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     background-image: url('PPB.jpg');
-    height: 100%;
+    /* height: 100%; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;

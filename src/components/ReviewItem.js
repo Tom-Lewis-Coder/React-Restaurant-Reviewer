@@ -9,7 +9,7 @@ const ReviewItem = ({ review, handleDelete, handleEdit }) => {
             <div id='starItem'>{[...Array(review.rating/20).keys()].map(el => el = <FaStar key={uuidv4()} />)}</div>
             <div id='reviewItem'>{review.review}</div><br/>
             <div id='custNameItem'>{review.custName}</div>
-            <div id='dateItem'>{review.date.toDateString()}</div>
+            <div id='dateItem'>{review.date.toString().slice(0,16)}</div>
             <div className='buttonItem'>
                 <button id='buttonDelete' onClick={() => handleDelete(review.id)} ><FaTrash /></button>
                 <button id='buttonEdit' onClick={() => handleEdit(review.id)} ><FaEdit /></button>

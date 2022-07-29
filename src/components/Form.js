@@ -4,7 +4,7 @@ import { Rating } from 'react-simple-star-rating'
 import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 
-export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing, rating, setRating, date, setDate } ) => {
+export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing, rating, setRating, date, setDate, saveReview } ) => {
 
     const handleChange = e => {
         const { name, value } = e.target
@@ -16,6 +16,8 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
         form.rating = rating
         form.date = date
         setReviews([ ...reviews, form ])
+        console.log([...reviews, form])
+        //saveReview(reviews)
         setForm({ pizzaplace: '', date: '', custName: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
         setDate(new Date())
@@ -27,7 +29,9 @@ export const Form  = ( { form, setForm, reviews, setReviews, editing, setEditing
         form.rating = rating
         form.date = date
         const updatedReviews = reviews.map(review => review.id === form.id ? form : review)
-        setReviews(updatedReviews) 
+        setReviews(updatedReviews)
+        console.log(updatedReviews) 
+        //saveReview(updatedReviews)
         setForm({ pizzaplace: '', date: '', custName: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
         setDate(new Date())
