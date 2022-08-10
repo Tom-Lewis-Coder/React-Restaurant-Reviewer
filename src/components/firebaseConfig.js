@@ -10,7 +10,6 @@ const firebaseConfig = {
     messagingSenderId: "867168686182",
     appId: "1:867168686182:web:c0a92b92e100bfe3979da7",
     measurementId: "G-HJK06BG9QB",
-    //databaseURL: "https://restaurant-reviewer-5d326-default-rtdb.europe-west1.firebasedatabase.app"
 };
 
 // Initialize Firebase
