@@ -2,13 +2,12 @@ import React from 'react'
 import ReviewItem from './ReviewItem'
 import { v4 as uuidv4 } from 'uuid'
 
-const ReviewList = ({ reviews, setReviews, setForm, setEditing, setRating, setDate, saveReview }) => {
+const ReviewList = ({ reviews, setReviews, setForm, setEditing, setRating, setDate, deleteReview }) => {
 
     const handleDelete = id => {
         const updatedreviews = reviews.filter(review => review.id !== id)
-        setReviews(updatedreviews)
-        console.log(updatedreviews) 
-        //saveReview(updatedreviews)
+        setReviews(updatedreviews) 
+        deleteReview(id)
         setForm({ pizzaplace: '', date: '', custName: '', review: '', rating: '', id: uuidv4() })
         setRating(0)
         setDate(new Date())
@@ -21,8 +20,6 @@ const ReviewList = ({ reviews, setReviews, setForm, setEditing, setRating, setDa
         setRating(editedReview[0].rating)
         setDate(editedReview[0].date)
         setEditing(true)
-        console.log(reviews) 
-        //saveReview(reviews)
     }
 
     return (
